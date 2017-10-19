@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_upload_forecast
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e-20170815\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-19 09:23+0000\n"
+"PO-Revision-Date: 2017-10-19 09:23+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_upload_forecast
+#: model:ir.ui.view,arch_db:mrp_upload_forecast.upload_forecast_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: mrp_upload_forecast
+#: model:ir.ui.view,arch_db:mrp_upload_forecast.upload_forecast_view
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast_data_file
+msgid "File"
+msgstr "Archivo"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast_name
+msgid "File Name"
+msgstr "Nombre de Archivo"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast_id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: mrp_upload_forecast
+#: model:ir.model.fields,field_description:mrp_upload_forecast.field_upload_forecast_state
+msgid "State"
+msgstr "Estado"
+
+#. module: mrp_upload_forecast
+#: model:ir.ui.view,arch_db:mrp_upload_forecast.upload_forecast_view
+msgid "This wizard lets upload a file. First column: Product name,\n"
+"                    Second column: date. Third column: quantity"
+msgstr "This wizard lets upload a file. First column: Product name,\n"
+"                    Second column: date. Third column: quantity"
+
+#. module: mrp_upload_forecast
+#: model:ir.actions.act_window,name:mrp_upload_forecast.action_upload_forecast
+#: model:ir.ui.menu,name:mrp_upload_forecast.mrp_upload_forecast
+#: model:ir.ui.view,arch_db:mrp_upload_forecast.upload_forecast_view
+msgid "Upload Forecast"
+msgstr "Upload Forecast"
+
+#. module: mrp_upload_forecast
+#: selection:upload.forecast,state:0
+msgid "choose"
+msgstr "choose"
+
+#. module: mrp_upload_forecast
+#: selection:upload.forecast,state:0
+msgid "get"
+msgstr "get"
+
+#. module: mrp_upload_forecast
+#: model:ir.ui.view,arch_db:mrp_upload_forecast.upload_forecast_view
+msgid "or"
+msgstr "o"
+
+#. module: mrp_upload_forecast
+#: model:ir.model,name:mrp_upload_forecast.model_upload_forecast
+msgid "upload.forecast"
+msgstr "upload.forecast"
+
