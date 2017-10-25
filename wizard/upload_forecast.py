@@ -47,32 +47,44 @@ class UploadForecast(models.TransientModel):
         list_projects = []
         for line in aux[:-1]:
             if num_line == 0:
+                line_aux = line.split(';')
                 num_line += 1
                 continue
             num_line += 1
             column = line.split(';')
-            if len(column) == 3:
-                products = ProductProduct.search([('name', '=', column[0])])
-                if products:
-                    if products.id not in list_projects:
-                        SaleForecast.search(
-                            [('product_id.id', '=', products.id)]).unlink()
-                        products.write(
-                            {'mps_active': True, 'apply_active': True})
-                        list_projects.append(products.id)
-                    try:
+            #quitar el num de columnas
+            #if len(column) == 3:
+            #busco el producto por referencia
+            products = ProductProduct.search([('default_code', '=', column[0])])
+            if products:
+                if products.id not in list_projects:
+                    SaleForecast.search(
+                        [('product_id.id', '=', products.id)]).unlink()
+                    products.write(
+                        {'mps_active': True, 'apply_active': True})
+                    list_projects.append(products.id)
+                try:
+                    #recorrer todas las columnas
+                    cont = 1
+                    for col in column[1:]:
+
+                        _logger.info('DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD')
+                        _logger.info(products.id)
+                        _logger.info(line_aux[cont].strip())
+                        _logger.info(col.strip())
                         SaleForecast.create({
-                                        'product_id': products.id,
-                                        'date': column[1].strip(),
-                                        'forecast_qty': column[2].strip()})
-                    except:
-                        error = 'check the line: ' + str(num_line)
-                        raise UserError(_(error))
-                    continue
-                else:
-                    error = 'the product does not exist! line: ' + str(num_line)
+                                    'product_id': products.id,
+                                    'date': line_aux[cont].strip(),
+                                    'forecast_qty': col.strip()})
+                        cont += 1
+                except:
+                    error = 'check the line: ' + str(num_line)
                     raise UserError(_(error))
+                continue
             else:
-                error = 'file must have 3 columns! line: ' + str(num_line)
+                error = 'the product does not exist! line: ' + str(num_line)
                 raise UserError(_(error))
+            #else:
+                #error = 'file must have 3 columns! line: ' + str(num_line)
+                #raise UserError(_(error))
 
